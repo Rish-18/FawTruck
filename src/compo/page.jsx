@@ -44,10 +44,10 @@ export default function Home() {
             </h2>
             <div className="h-px w-1/5 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
           </div>
-          <p className="text-center text-black text-xs md:text-xl mb-8 px-20">
-            Automotive enterprise with the largest <br /> sales volume in the
-            world
-          </p>
+          <p className="text-center text-black text-sm md:text-lg lg:text-xl leading-relaxed md:leading-loose mb-4 md:mb-6 lg:mb-8 px-4 md:px-16 lg:px-20">
+  Automotive enterprise with the largest <br /> sales volume in the world
+</p>
+
 
           {/* Truck Models Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
