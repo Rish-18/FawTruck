@@ -51,7 +51,7 @@ export function Navbar() {
           <li className="flex justify-center items-center border-b border-gray-700 md:border-none">
             <a
               href="#home"
-              className="block px-4 py-2 text-white hover:bg-white hover:text-black transition text-sm md:text-base"
+              className="block px-4 py-2 text-white hover:bg-white rounded-lg hover:text-black transition text-sm md:text-base"
             >
               Home
             </a>
@@ -59,7 +59,7 @@ export function Navbar() {
           <li className="flex justify-center items-center border-b border-gray-700 md:border-none">
             <a
               href="#models"
-              className="block px-4 py-2 text-white hover:bg-white hover:text-black transition text-sm md:text-base"
+              className="block px-4 py-2 text-white hover:bg-white rounded-lg hover:text-black transition text-sm md:text-base"
             >
               Models
             </a>
@@ -67,7 +67,7 @@ export function Navbar() {
           <li className="flex justify-center items-center border-b border-gray-700 md:border-none">
             <a
               href="#about"
-              className="block px-4 py-2 text-white hover:bg-white hover:text-black transition text-sm md:text-base"
+              className="block px-4 py-2 text-white hover:bg-white rounded-lg hover:text-black transition text-sm md:text-base"
             >
               About
             </a>
@@ -75,7 +75,7 @@ export function Navbar() {
           <li className="flex justify-center items-center border-b border-gray-700 md:border-none">
             <a
               href="#contact"
-              className="block px-4 py-2 text-white hover:bg-white hover:text-black transition text-sm md:text-base"
+              className="block px-4 py-2 text-white hover:bg-white rounded-lg hover:text-black transition text-sm md:text-base"
             >
               Contact
             </a>

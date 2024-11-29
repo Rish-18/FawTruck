@@ -21,6 +21,7 @@ import logo2 from '../assets/logo2.png';
 import About from "./about";
 import Footer from "./footer";
 import Map from "./map";
+import TruckModelsCarousel from "./TruckModelsCarousel";
 
 
 export default function Home() {
@@ -35,61 +36,67 @@ export default function Home() {
 
       {/* Truck Models Section */}
       <section className="py-12 px-20 bg-white">
-        <div className="container mx-auto px-4">
-          {/* Title with Horizontal Lines */}
-          <div className="flex items-center justify-center mb-12">
-            <div className="h-px w-1/5 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
-            <h2 className="text-center text-3xl font-bold mx-4">
-              Truck models
-            </h2>
-            <div className="h-px w-1/5 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
-          </div>
-          <p className="text-center text-black text-sm md:text-lg lg:text-xl leading-relaxed md:leading-loose mb-4 md:mb-6 lg:mb-8 px-4 md:px-16 lg:px-20">
-  Automotive enterprise with the largest <br /> sales volume in the world
-</p>
+  <div className="container mx-auto px-4">
+    {/* Title with Horizontal Lines */}
+    <div className="flex items-center justify-center mb-12">
+      <div className="h-px w-1/5 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+      <h2 className="text-center text-3xl font-bold mx-4">
+        Truck models
+      </h2>
+      <div className="h-px w-1/5 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+    </div>
+    <p className="text-center text-black text-sm md:text-lg lg:text-xl leading-relaxed md:leading-loose mb-4 md:mb-6 lg:mb-8 px-4 md:px-16 lg:px-20">
+      Automotive enterprise with the largest <br /> sales volume in the world
+    </p>
 
-
-          {/* Truck Models Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {[
-              "New Energy",
-              "Tractor",
-              "Rigid Truck",
-              "Dump Truck",
-              "Special Purpose",
-            ].map((truck, index) => (
-              <div
-                key={index}
-                className="relative bg-gray-900 rounded-lg overflow-hidden group"
-              >
-                {/* Dimmed Image */}
-                <img
-                  src="https://www.scania.com/content/dam/www/market/master/products/attributes/electrification/new-energy/electric-truck-new-energy-16-9.jpg.transform/Rend_1200X630/image.jpg"
-                  alt={truck}
-                  className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                {/* Overlay for Dimming */}
-                <div className="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition-all duration-300"></div>
-                {/* Text on Image */}
-                <h3 className="absolute inset-x-0 bottom-4 text-center text-white text-lg font-semibold">
-                  {truck}
-                </h3>
-              </div>
-            ))}
-          </div>
+    {/* Truck Models Grid (Visible only on desktop and larger) */}
+    <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      {[
+        "New Energy",
+        "Tractor",
+        "Rigid Truck",
+        "Dump Truck",
+        "Special Purpose",
+      ].map((truck, index) => (
+        <div
+          key={index}
+          className="relative bg-gray-900 rounded-lg overflow-hidden group"
+        >
+          {/* Dimmed Image */}
+          <img
+            src="https://www.scania.com/content/dam/www/market/master/products/attributes/electrification/new-energy/electric-truck-new-energy-16-9.jpg.transform/Rend_1200X630/image.jpg"
+            alt={truck}
+            className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          {/* Overlay for Dimming */}
+          <div className="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-30 transition-all duration-300"></div>
+          {/* Text on Image */}
+          <h3 className="absolute inset-x-0 bottom-4 text-center text-white text-lg font-semibold">
+            {truck}
+          </h3>
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* Truck Models Carousel (Visible only on mobile view) */}
+    <div className="md:hidden">
+    <TruckModelsCarousel
+     // Adjust the width to 320px and reduce height
+  />
+    </div>
+  </div>
+</section>
 
       {/* About Us Section */}
       <About />
 
       {/* Contact Section */}
-      <section className="py-8 pl-4 md:pl-8  bg-gradient-to-r from-white via-white to-blue-500">
+      <section className="py-8 md:pl-8  bg-gradient-to-r from-white via-white to-blue-500">
         <div className="container  grid grid-cols-1 md:grid-cols-[2fr,3fr] gap-8">
           {/* Left Side - Contact Form */}
           <div
             className="bg-white px-6 pb-6 md:px-8 md:pb-8 "
-            style={{ margin: "30px 0 30px 20px" }}
+            style={{ margin: "30px 0 30px 0px" }}
           >
             <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
