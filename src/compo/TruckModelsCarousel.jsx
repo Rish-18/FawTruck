@@ -1,4 +1,3 @@
-
 import Slider from "react-slick";
 
 const truckModels = ["New Energy", "Tractor", "Rigid Truck", "Dump Truck", "Special Purpose"];
