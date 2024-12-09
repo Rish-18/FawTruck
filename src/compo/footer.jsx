@@ -116,7 +116,7 @@ function Footer() {
     </div>
     <a
     href="#"
-    className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 flex items-center justify-end rounded-full transition-all shadow-md ml-auto"
+    className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 flex items-center justify-between rounded-full transition-all shadow-md ml-auto"
 >
     <img
         src={img2}
@@ -127,7 +127,7 @@ function Footer() {
 
 
 
-</div>
+                        </div>
 
 
                     </div>

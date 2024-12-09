@@ -1,15 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 function Map() {
+  const { ref, inView } = useInView({
+    triggerOnce: false, // Allow animation to trigger every time it comes into view
+  });
+
   return (
     <div>
-       <div className="my-12 px-[50px] h-[300px] rounded-lg">
+      <div
+        ref={ref}
+        className={`my-12 px-[50px] h-[300px] rounded-lg transition-transform duration-1000 ${
+          inView ? 'transform scale-100 opacity-100' : 'transform scale-90 opacity-0'
+        }`}
+      >
         {/* Map Embed */}
         <div className="w-full h-full rounded-lg overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.2067616549925!2d72.84606282373979!3d19.18616954850764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6fd2a2f20b9%3A0x4f3d2c5473f5809c!2sMalad%20Foot%20Over%20Brg%2C%20Malad%2C%20Vijaykar%20Wadi%20Industrial%2C%20Vijaykar%20Wadi%2C%20Malad%20West%2C%20Mumbai%2C%20Maharashtra%20400064!5e0!3m2!1sen!2sin!4v1732534750501!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.635798016259!2d50.01158537399738!3d26.40295158181417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e3603e3654e1a5d%3A0x113a729945c94f75!2sAl%20Shamel%20Commercial%20Vehicles!5e0!3m2!1sen!2sin!4v1733303952546!5m2!1sen!2sin"
+            width="1200"
+            height="450"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
@@ -18,7 +28,7 @@ function Map() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Map;

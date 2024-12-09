@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import frame147 from '../assets/Frame 147.png'
+import { motion } from "framer-motion";
+
 
 export function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -21,6 +23,11 @@ export function Carousel() {
   }, [])
 
   return (
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
     <div className="relative w-full h-[500px] sm:h-[700px] overflow-hidden rounded-br-[50px] md:rounded-br-[120px]">
       {/* First Image */}
       <img
@@ -66,5 +73,7 @@ export function Carousel() {
         <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6 text-gray-800" />
       </button>
     </div>
+
+    </motion.div>
   )
 }

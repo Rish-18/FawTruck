@@ -1,6 +1,7 @@
 import { useState } from "react";
 import img1 from "../assets/img1.png"; // Ensure the correct path
 import logo2 from "../assets/logo2.png"; // Ensure the correct path
+import { Link } from "react-scroll";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,46 +50,56 @@ export function Navbar() {
             }`}
         >
           <li className="flex justify-center items-center border-b border-gray-700 md:border-none">
-            <a
-              href="#home"
+            <Link
+              to="Home"
+              smooth={true}
+              duration={500}
               className="block px-4 py-2 text-white hover:bg-white rounded-lg hover:text-black transition text-sm md:text-base"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li className="flex justify-center items-center border-b border-gray-700 md:border-none">
-            <a
-              href="#models"
+            <Link
+              to="Models"
+              smooth={true}
+              duration={500}
               className="block px-4 py-2 text-white hover:bg-white rounded-lg hover:text-black transition text-sm md:text-base"
             >
               Models
-            </a>
+            </Link>
           </li>
           <li className="flex justify-center items-center border-b border-gray-700 md:border-none">
-            <a
-              href="#about"
+            <Link
+              to="About"
+              smooth={true}
+              duration={500}
               className="block px-4 py-2 text-white hover:bg-white rounded-lg hover:text-black transition text-sm md:text-base"
             >
               About
-            </a>
+            </Link>
           </li>
           <li className="flex justify-center items-center border-b border-gray-700 md:border-none">
-            <a
-              href="#contact"
+            <Link
+              to="Contact"
+              smooth={true}
+              duration={500}
               className="block px-4 py-2 text-white hover:bg-white rounded-lg hover:text-black transition text-sm md:text-base"
             >
               Contact
-            </a>
+            </Link>
           </li>
           <li className="flex justify-center items-center border-b border-gray-700 md:border-none">
-            <a
-              href="#call"
-              className="block px-4 py-2 text-white hover:bg-white hover:text-black transition"
+            <Link
+              to="#"
+              smooth={true}
+              duration={500}
+              className="block px-4 py-2 text-white hover:text-black transition"
             >
               <button className="px-3 py-1 bg-white text-blue-700 rounded-lg hover:bg-blue-100 transition text-sm md:text-base">
                 Request Call
               </button>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
